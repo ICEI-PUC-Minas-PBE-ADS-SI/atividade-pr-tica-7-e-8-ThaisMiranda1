@@ -17,10 +17,3 @@ Leia o enunciado completo no Canvas.
 - Proposta de projeto escolhida:
 - Breve descrição sobre seu projeto:
 
-## Print da versão responsiva com CSS puro
-
-<<  COLOQUE A IMAGEM AQUI >>
-
-## Print da versão responsiva com Bootstrap
-
-<<  COLOQUE A IMAGEM AQUI >>
