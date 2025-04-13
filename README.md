@@ -12,7 +12,7 @@ Leia o enunciado completo no Canvas.
 
 ## Informações Gerais
 
-- Nome:
+- Nome: Thaís Paula Miranda
 - Matricula:
 - Proposta de projeto escolhida:
 - Breve descrição sobre seu projeto:
