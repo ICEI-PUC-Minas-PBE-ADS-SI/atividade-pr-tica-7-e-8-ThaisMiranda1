@@ -13,7 +13,7 @@ Leia o enunciado completo no Canvas.
 ## Informações Gerais
 
 - Nome: Thaís Paula Miranda
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Matricula:  878662
+- Proposta de projeto escolhida: Guia de local Turistico
+- Breve descrição sobre seu projeto: Um Guia detalhado por dentro da bela Itália.
 
