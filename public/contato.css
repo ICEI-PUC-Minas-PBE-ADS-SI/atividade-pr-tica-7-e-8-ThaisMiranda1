@@ -1,0 +1,190 @@
+/* ESTRUTURA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: velista;
+    margin: 0;
+    padding: 0;
+    background-color: #F7F2EB;
+}
+
+/* Estilos do Cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #205834;
+    padding: 15px 30px;
+    color: rgb(255, 255, 255);
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+/* Menu e pesquisa */
+
+    .menu-pesquisa {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+        border-radius: 8px;
+        border: 1px solid #000;
+        gap: 1rem;
+        color: #A12B2D;
+        padding: 10px;
+}
+    
+
+.menu-pesquisa:hover {
+    display: flex;
+    background-color: green;
+    color: black;
+    gap: 1rem;
+  }
+
+.menu-pesquisa:active {
+    display: flex;
+    background-color:#F7F2EB;
+    color: yellow;
+    gap: 1rem;
+}  
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+}
+
+nav ul li a {
+    border: 1px solid #090003;
+    border-radius: 12px;
+    padding: 0.9rem;
+    text-decoration: none;
+    color: #205834;
+    background-color: #F7F2EB;
+}
+
+/* Pesquisa */
+.caixa-pesquisa {
+    display: flex;
+    align-items: center;
+    border: 1px solid #000; 
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: rgb(255, 255, 255);
+}
+
+.texto-pesquisa {
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.caixa-pesquisa button {
+    margin-left: 0.5rem;
+    cursor: pointer;
+    border: none;
+    background-color:#205834;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+/* Estilos do Conteúdo Principal */
+
+h4{
+    font-family: velista;
+    color: #A12B2D;
+    font-size: 2rem;
+    text-align: center;
+
+}
+main p {
+    color: black;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.form-container {
+    margin: 0 auto;
+    padding: 100px;
+    background-color:  #F7F2EB; /* Cor de fundo do formulário */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Largura máxima do formulário */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block; /* Faz o rótulo ocupar toda a largura */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #8B4513; /* Cor da borda ao focar */
+    outline: none;
+}
+
+button {
+    padding: 12px 15px;
+    background-color: #8B4513; /* Cor do botão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #205834; /* Cor do botão ao passar o mouse */
+}
+
+/* Estilos do Rodapé */
+
+/* Estilos do Rodapé */
+footer {
+    background-color: #205834;
+    color: #F2DAC4;
+    text-align: center;
+    padding: 1rem;
+    border-top: 2px solid #000000;
+}

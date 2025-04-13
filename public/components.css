@@ -1,0 +1,32 @@
+/* components.css */
+
+/* Style for hotel cards */
+.hotel-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    transition: transform 0.2s;
+}
+
+.hotel-card:hover {
+    transform: scale(1.05);
+}
+
+.hotel-card h3 {
+    margin: 0 0 10px;
+}
+
+.hotel-card p {
+    margin: 0 0 10px;
+}
+
+.hotel-card a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.hotel-card a:hover {
+    text-decoration: underline;
+}
