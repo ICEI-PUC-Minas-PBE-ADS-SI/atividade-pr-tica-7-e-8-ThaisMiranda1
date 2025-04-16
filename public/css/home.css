@@ -1,0 +1,524 @@
+/* VARIÁVEIS GLOBAIS */
+:root {
+    --cor-verde: #205834;
+    --cor-verde-claro: #72A66A;
+    --cor-branco: #F7F2EB;
+    --cor-destaque: #A12B2D;
+    --cor-hover: #044c03;
+    --cor-hover-menu: #d0e8d0;
+    --cor-azul: #3A81C1;
+    --cor-hover-botao: #156a36;
+    --fonte-principal: 'velista', Arial, sans-serif;
+}
+
+/* Fade-in para elementos que aparecem na tela */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicar na classe .fade-in (ou diretamente em elementos) */
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+/* Feedback visual para botões: pulse no clique */
+.botao:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Títulos */
+h1 {
+    font-size: 2.5rem; /* 40px, por exemplo */
+    margin-bottom: 1rem;
+    color: var(--cor-destaque);
+}
+h2 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    color: var(--cor-verde);
+}
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.7rem;
+    color: var(--cor-destaque);
+}
+p {
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+}
+
+
+/* GERAL */
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-branco);
+    line-height: 1.6;
+    font-size: 16px; /* base */
+    color: #333;
+}
+
+/* LINKS */
+a {
+    color: var(--cor-azul);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* CABEÇALHO */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--cor-verde);
+    padding: 15px 30px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* MENU */
+nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+}
+
+nav ul li a {
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 12px;
+    padding: 10px 20px;
+    background-color: var(--cor-branco);
+    color: var(--cor-verde);
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--cor-hover-menu);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* BANNER */
+.banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 4px solid var(--cor-verde);
+    margin-bottom: 2rem;
+}
+
+/* Estilo para a imagem do banner */
+.banner img {
+    width: 100%;
+    height: 60vh;               /* Altura responsiva: 60% da viewport */
+    object-fit: cover;          /* A imagem cobrirá o container sem distorcer */
+    object-position: center;    /* Centraliza a imagem */
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+/* Efeito no hover: leve zoom */
+.banner img:hover {
+    transform: scale(1.05);
+}
+
+/* Caso queira adicionar um overlay de texto sobre o banner */
+.banner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);  /* Fundo semitransparente para facilitar a leitura */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    text-align: center;
+    padding: 1rem;
+}
+
+.banner .overlay h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .banner img {
+        height: 40vh;  /* Reduz a altura para telas menores */
+    }
+    
+    .banner .overlay h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner img {
+        height: 30vh;
+    }
+    
+    .banner .overlay h2 {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+    }
+}
+
+/* MAIN e SEÇÕES */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+main h1 {
+    color: var(--cor-destaque);
+    font-weight: bold;
+    text-align: center;
+    font-size: 56px !important;
+    margin-bottom: 1.5rem;
+}
+
+/* Seção dos cards (destinos e hotéis) */
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* CARD DE POSTAGEM (destinos e hotéis) */
+.caixa-post {
+    background: var(--cor-verde-claro);
+    border: 2px solid var(--cor-verde);
+    border-radius: 17px;
+    padding: 1.5rem;
+    margin: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.caixa-post:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+
+.caixa-post img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.caixa-post img:hover {
+    transform: scale(1.05);
+}
+
+h4.subtitulo {
+    color: var(--cor-destaque);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Texto dentro dos cards */
+.texto {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* BOTÕES */
+.botao {
+    display: inline-block;
+    margin: 0.3rem;
+    padding: 10px 20px;
+    background-color: var(--cor-verde);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.botao:hover {
+    background-color: var(--cor-hover-botao);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Modal para Hotels se desejado (pode ser adaptado ao seu layout) */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-content {
+    background: var(--cor-branco);
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+}
+
+/* Botão de fechar modal */
+.modal-content .fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: var(--cor-destaque);
+    cursor: pointer;
+}
+
+/* HOTÉIS */
+/* Caso a página hoteis.html tenha uma estrutura de lista de hotéis, defina uma classe específica */
+.lista-hoteis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 1rem;
+}
+
+.hotel-card {
+    background: var(--cor-branco);
+    border: 2px solid var(--cor-verde);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hotel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+
+.hotel-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.hotel-card .detalhes {
+    padding: 1rem;
+    text-align: left;
+}
+
+.hotel-card .detalhes h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--cor-destaque);
+}
+
+.hotel-card .detalhes p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: var(--cor-verde);
+    color: #F2DAC4;
+    text-align: center;
+    padding: 1rem;
+    border-top: 2px solid #000;
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li a {
+        padding: 12px;
+    }
+
+    main h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+}
+
+/* Estilo para a seção de detalhes da página de destino */
+#conteudo-detalhe {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, #F7F2EB, #e6e1dd);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease;
+}
+
+#conteudo-detalhe img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.4s ease;
+}
+
+#conteudo-detalhe img:hover {
+    transform: scale(1.03);
+}
+
+/* Títulos e subtítulos */
+#conteudo-detalhe h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--cor-destaque);
+    text-align: center;
+}
+
+#conteudo-detalhe h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--cor-verde);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Texto do parágrafo */
+#conteudo-detalhe p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+/* Botões na página de informações */
+#conteudo-detalhe .botao {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 0.5rem;
+    background-color: var(--cor-verde);
+    color: #FFF;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+#conteudo-detalhe .botao:hover {
+    background-color: var(--cor-hover);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+
+/*RESPONSIVIDADE*/
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Esconda o menu e adicione um botão hamburguer (HTML precisa ter o ícone) */
+    .menu-mobile {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+    
+    /* Esconder menu por padrão */
+    nav ul {
+        display: none;
+        width: 100%;
+    }
+    
+    /* Exibir o menu quando ativo */
+    nav.active ul {
+        display: flex;
+    }
+}
+

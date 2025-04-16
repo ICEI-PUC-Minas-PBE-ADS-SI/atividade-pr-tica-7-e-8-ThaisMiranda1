@@ -1,98 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Guia de Lugares Turísticos</title>
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Local Turístico</title>
+  <link rel="stylesheet" href="css/home.css">
 </head>
-
 <body>
-    <header>
-        <div class="logo">
-            <img src="imagem/La_Belle.png" alt="Logo do site Guia de Lugares Turísticos">
-        </div>
-        <div class="menu-pesquisa">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="destinos.html">Destinos</a></li>
-                    <li><a href="culinaria.html">Culinária</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-            <div class="caixa-pesquisa">
-                <input type="text" class="texto-pesquisa" placeholder="Pesquise um destino...">
-                <button>Buscar</button>
-            </div>
-        </div>
-    </header>
-
-    <div class="banner">
-        <img src="banner.jpg" alt="Banner">
+  <header>
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="./imagem/La_Belle.png" alt="Logo Guia de Local Turístico">
     </div>
+    
+    <!-- MENU -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinos.html">Destinos</a></li>
+        <li><a href="hoteis.html">Hotéis</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <h1>La Belle Itália</h1>
-        <p>Nel Tourism</p>
+  <!-- BANNER (opcional) -->
+  <div class="banner">
+    <img src="imagem/banner.jpg" alt="Banner do Guia de Local Turístico">
+    <div class="overlay">
+      <h2>Descubra destinos incríveis!</h2>
+    </div>
+  </div>
 
-        <section>
-            <article class="caixa-post">
-                <img src="imagem/Milano.jpg" alt="Imagem de Destaque">
-                <h4 class="subtitulo"><span>Milano, MI, Itália</span></h4>
-                <p class="texto">Elegância e inovação em cada esquina. A capital da moda e do design nunca decepciona!</p>
-                <a href="hoteis.html" class="botao">Ver Hotéis em Milano</a>
-                <a href="destinos.html" class="botao">Mais Informações de Destino</a> 
-                <a href="imagem/Milano.jpg" class="botao">Clique para ver a imagem</a>
-            </article>
+  <main>
+    <section id="lista-destinos">
+      <!-- Os cards dos destinos serão adicionados aqui dinamicamente -->
+    </section>
+  </main>
 
-            <article class="caixa-post">
-                <img src="imagem/Roma.jpg" alt="Imagem de Destaque">
-                <h4 class="subtitulo"><span>Roma, Itália</span></h4>
-                <p class="texto">A cidade eterna, onde o passado e o presente se encontram em cada rua e monumento.</p>
-                <a href="hoteis.html" class="botao">Ver Hotéis em Roma</a>
-                <a href="destinos.html" class="botao">Mais Informações de Destino</a> 
-                <a href="imagem/Roma.jpg" class="botao">Clique para ver a imagem</a>
-            </article>
+  <footer>
+    <p>&copy; 2025 Guia de Local Turístico. Todos os direitos reservados.</p>
+  </footer>
 
-            <article class="caixa-post">
-                <img src="imagem/Varenna.jpg" alt="Imagem de Destaque">
-                <h4 class="subtitulo"><span>Varenna, Itália</span></h4>
-                <p class="texto">Um pedacinho do paraíso às margens do Lago de Como. Tranquilidade, beleza e romance em cada paisagem.</p>
-                <a href="hoteis.html" class="botao">Ver Hotéis em Varenna</a>
-                <a href="destinos.html" class="botao">Mais Informações de Destino</a> 
-                <a href="imagem/Varenna.jpg" class="botao">Clique para ver a imagem</a>
-            </article>
-
-            <article class="caixa-post">
-                <img src="imagem/Veneza.jpg" alt="Imagem de Destaque">
-                <h4 class="subtitulo"><span>Veneza, Itália</span></h4>
-                <p class="texto">Canais, gôndolas e um charme que só essa cidade flutuante pode oferecer. Um verdadeiro conto de fadas!</p>
-                <a href="hoteis.html" class="botao">Ver Hotéis em Veneza</a>
-                <a href="destinos.html" class="botao">Mais Informações de Destino</a> 
-                <a href="imagem/Veneza.jpg" class="botao">Clique para ver a imagem</a>
-            </article>
-        </section>
-        
-        <!-- Seção da bandeira italiana -->
-        <div class="flag animate__animated" style="margin-top: 20px;">
-            <div class="stripe green"></div>
-            <div class="stripe white"></div>
-            <div class="stripe red"></div>
-        </div>
-
-        <script>
-            document.querySelector('.flag').addEventListener('click', function() {
-                this.classList.toggle('animate__bounce');
-            });
-        </script>
-    </main>
-
-    <footer>
-        © 2025 La Belle Itália. Inspirado na arte, na culinária e na paixão da Itália.
-    </footer>
+  <!-- Scripts ao final do body -->
+  <script src="js/destinos.js"></script>
+  <script src="js/app.js"></script>
 </body>
-
 </html>

@@ -17,5 +17,7 @@ Leia o enunciado completo no Canvas.
 - Proposta de projeto escolhida: Guia de local Turistico
 - Breve descrição sobre seu projeto: Um Guia detalhado por dentro da bela Itália.
 
-![public\imagem\Print código.png](<public/imagem/Print código.png>)
+![alt text](public/imagem/Print_Home_Page.png) Print da Home-Page.
+
+![alt text](public/imagem/Print_detalhe.png) Print da Página de Detalhes.
 
